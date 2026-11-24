@@ -1,0 +1,398 @@
+/* ========================================================
+   RETRO / ASCII PERSONAL WEBSITE STYLESHEET
+   Kurallar:
+   - Zemin: #0c0d10
+   - Yazı: #f5f5f7
+   - Vurgu: #ff2a85
+   - Başlıklar: 'Press Start 2P'
+   - Metinler: 'VT323'
+   - Kenarlıklar: 2px dashed
+   - Sıfır gölge, sıfır gradyan, sıfır yuvarlak köşe
+   ======================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #0c0d10;
+    color: #f5f5f7;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+body {
+    background-color: #0c0d10;
+    color: #f5f5f7;
+    padding-top: 60px; /* Sabit menü boşluğu */
+    overflow-x: hidden;
+}
+
+/* ========================================================
+   SABİT ÜST MENÜ
+   ======================================================== */
+.retro-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #0c0d10;
+    border-bottom: 2px dashed #ff2a85;
+    z-index: 999;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 14px;
+    color: #ff2a85;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #f5f5f7;
+    text-decoration: none;
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+    transition: color 0.15s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ff2a85;
+    background-color: #1a1b20;
+}
+
+/* ========================================================
+   ASCII BÖLÜM AYRAÇLARI
+   ======================================================== */
+.ascii-divider {
+    text-align: center;
+    color: #ff2a85;
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+    padding: 20px 10px;
+    user-select: none;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* ========================================================
+   GENEL BÖLÜM BAŞLIKLARI VE KONTEYNER
+   ======================================================== */
+.section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.section-heading {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 22px;
+    color: #ff2a85;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* ========================================================
+   BÖLÜM 1: KAPAK (TAM EKRAN YÜKSEKLİĞİNDE)
+   ======================================================== */
+.section-kapak {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 2px dashed #f5f5f7;
+}
+
+.cover-image-container {
+    width: 100%;
+    max-width: 900px;
+    border: 2px dashed #ff2a85;
+    margin-bottom: 30px;
+    background-color: #121316;
+}
+
+.cover-img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+    display: block;
+}
+
+.cover-content {
+    max-width: 800px;
+}
+
+.glitch-title {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 32px;
+    color: #f5f5f7;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    word-break: break-word;
+}
+
+.cover-tagline {
+    font-family: 'VT323', monospace;
+    font-size: 26px;
+    color: #ff2a85;
+    margin-bottom: 30px;
+}
+
+.ascii-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: transparent;
+    color: #f5f5f7;
+    border: 2px dashed #ff2a85;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 13px;
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.ascii-btn:hover {
+    background-color: #ff2a85;
+    color: #0c0d10;
+}
+
+/* ========================================================
+   BÖLÜM 2: HAKKIMDA
+   ======================================================== */
+.hakkimda-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    border: 2px dashed #ff2a85;
+    padding: 35px;
+    background-color: #121316;
+}
+
+.mascot-wrapper {
+    flex-shrink: 0;
+    width: 170px;
+    border: 2px dashed #f5f5f7;
+    background-color: #0c0d10;
+}
+
+.mascot-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.hakkimda-text-box {
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+.hakkimda-text-box p {
+    margin-bottom: 15px;
+}
+
+.hakkimda-text-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================================
+   BÖLÜM 3: İLGİ ALANLARIM (ÜÇ KART)
+   ======================================================== */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.retro-card {
+    border: 2px dashed #ff2a85;
+    background-color: #121316;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image-box {
+    border-bottom: 2px dashed #f5f5f7;
+    background-color: #0c0d10;
+}
+
+.card-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.card-info {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 14px;
+    color: #ff2a85;
+    margin-bottom: 12px;
+}
+
+.card-desc {
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+    color: #f5f5f7;
+}
+
+/* ========================================================
+   BÖLÜM 4: İLETİŞİM
+   ======================================================== */
+.contact-box {
+    border: 2px dashed #ff2a85;
+    padding: 35px;
+    background-color: #121316;
+    text-align: center;
+}
+
+.contact-intro {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #f5f5f7;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-link {
+    color: #ff2a85;
+    text-decoration: none;
+    font-size: 22px;
+    border: 1px dashed #f5f5f7;
+    padding: 8px 18px;
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.contact-link:hover {
+    background-color: #ff2a85;
+    color: #0c0d10;
+    border-color: #ff2a85;
+}
+
+/* ========================================================
+   FOOTER (EN ALTTTAKİ NOT)
+   ======================================================== */
+.retro-footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 2px dashed #ff2a85;
+    background-color: #0c0d10;
+}
+
+.ai-credit {
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    color: #f5f5f7;
+}
+
+/* ========================================================
+   DUYARLILIK (RESPONSIVE)
+   ======================================================== */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        padding: 5px 10px;
+    }
+
+    body {
+        padding-top: 85px;
+    }
+
+    .retro-nav {
+        height: auto;
+        padding-bottom: 6px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    .glitch-title {
+        font-size: 22px;
+    }
+
+    .cover-tagline {
+        font-size: 20px;
+    }
+
+    .hakkimda-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        font-size: 18px;
+    }
+}
+
+/* ========================================================
+   HAREKETİ AZALTMAYI SEÇEN KULLANICILAR (ACCESSIBILITY)
+   ======================================================== */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto !important;
+    }
+
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

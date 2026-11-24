@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0d0f12;
+    color: #f3f4f6;
+    line-height: 1.6;
+}
+
+/* 1. Cover Image full width at the very top */
+.cover-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* 2. Heading with Small Mascot */
+.header-section {
+    padding: 50px 20px 20px;
+    text-align: center;
+}
+
+.heading-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.mascot-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.25);
+}
+
+.heading-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+/* 3. My Interests Section & Three Cards */
+.interests-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    text-align: center;
+}
+
+.interests-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #ff3385;
+    letter-spacing: 0.5px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #171a21;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(255, 51, 133, 0.2);
+    border-color: rgba(255, 51, 133, 0.4);
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #f9fafb;
+}
+
+/* 4. Footer & Bottom Note */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    background-color: #090a0d;
+}
+
+.ai-note {
+    color: #9ca3af;
+    font-size: 0.85rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .heading-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .heading-container h1 {
+        font-size: 1.85rem;
+    }
+
+    .mascot-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .interests-section h2 {
+        font-size: 1.6rem;
+    }
+}
